@@ -10,8 +10,27 @@ Console.WriteLine ( - - - Выбор элементов с заданным чи
 
 Console.SetCursorPosition(10,2);
 
-Console.ReadLine ("Введите вариант ввода данных (11 - ввод с клавиатуры, 22 - тестовая строка);
+Console.WriteLine ("Введите вариант ввода данных (11 - ввод с клавиатуры, 22 - тестовая строка): ");
+int way = Console.ReadLine (); 
+
+switch (way)
+{
+case 11:
+Console.WriteLine ("Ввод первоначального массива строк осуществляется с клавиатуры");
+Console.Write("Укажите тип разделителя: для (,) введите 1; для (/) введите 2; для (;) введите 3; для (" ") введите 4): ");
+int type = Console.ReadLine ()
+Console.WriteLine ("Введите данные, используя выбранный разделитель: ")
 string set = Console.ReadLine() ?? "";
+break;
+
+default:
+string set = "abc defg hij klmnop qrs tuvw xyz";
+type = 4;
+break;
+}
+
+
+//string set = Console.ReadLine() ?? "";
 
 // Ввод разделителя
 
