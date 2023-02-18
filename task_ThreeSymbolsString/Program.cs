@@ -92,6 +92,7 @@ int l = 0;
 for (int i = 0; i < lengthInitial; i++)
 {
     int sl = initialArray[i].Length;
+    
 if (sl <= symbol & initialArray[i] != " ") // Проверка на количество символов и пробел
 {
     baseArray[k] = initialArray[i];
