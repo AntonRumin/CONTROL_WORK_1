@@ -6,29 +6,33 @@
 
 Console.Clear ();
 
-Console.WriteLine ( - - - Выбор элементов с заданным числом символов - - -);
+Console.WriteLine ( "- - - Выбор элементов с заданным числом символов - - -");
 
-Console.SetCursorPosition(10,2);
+Console.SetCursorPosition(2,2);
 
 Console.WriteLine ("Введите вариант ввода данных (11 - ввод с клавиатуры, 22 - тестовая строка): ");
-int way = Console.ReadLine (); 
 
+int way = int.Parse(Console.ReadLine () ?? ""); 
+string type =String.Empty;
+string set = String.Empty;
 switch (way)
 {
 case 11:
 Console.WriteLine ("Ввод первоначального массива строк осуществляется с клавиатуры");
-Console.Write("Укажите тип разделителя: для (,) введите 1; для (/) введите 2; для (;) введите 3; для (" ") введите 4): ");
-int type = Console.ReadLine ()
-Console.WriteLine ("Введите данные, используя выбранный разделитель: ")
-string set = Console.ReadLine() ?? "";
+//Console.WriteLine ("Укажите тип разделителя: для (,) введите 1; для (/) введите 2; для (;) введите 3; для (" ") введите 4: ");
+//int type = int.Parse(Console.ReadLine());
+type = Console.ReadLine();
+Console.WriteLine ("Введите данные, используя выбранный разделитель: ");
+set = Console.ReadLine() ?? "";
 break;
 
 default:
-string set = "abc defg hij klmnop qrs tuvw xyz";
-type = 4;
+set = "abc defg hij klmnop qrs tuvw xyz";
+//type = null;
 break;
-}
 
+}
+string[] initialArray = set.Split(type);
 
 //string set = Console.ReadLine() ?? "";
 
@@ -37,7 +41,7 @@ break;
 //string set = Console.ReadLine () ?? "";
 // Разбиение данных по разделителю (,) и размещение в элементы массива
 
-string[] initialArray = set.Split(null);
+//string[] initialArray = set.Split(type);
 
 // Вывод данных массива с новым разделителем
 
